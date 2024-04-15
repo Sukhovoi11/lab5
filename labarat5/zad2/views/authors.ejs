@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authors</title>
+</head>
+<body>
+<h1>Authors</h1>
+<% if (authors.length === 0) { %>
+    <p> Nie znaleziono autorów </p>
+<% } else { %>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+        </tr>
+        <% authors.forEach(author => { %>
+            <tr>
+                <td><%= author.id %></td>
+                <td><%= author.name %></td>
+            </tr>
+        <% }); %>
+    </table>
+<% } %>
+</body>
+</html>
